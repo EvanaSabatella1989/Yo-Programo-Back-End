@@ -1,35 +1,22 @@
 
-package com.proyecto.demo.model;
+package com.proyecto.demo.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-public class Experiencia {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+
+public class DtoExperiencia {
+    @NotBlank
     private String nombreE;
     private String descripcionE;
     private String imgE;
 
-    public Experiencia() {
+    public DtoExperiencia() {
     }
 
-    public Experiencia(String nombreE, String descripcionE, String imgE) {
+    public DtoExperiencia(String nombreE, String descripcionE, String imgE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.imgE = imgE;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombreE() {
